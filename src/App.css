@@ -1,52 +1,82 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
 
 html, body {
     margin: 0;
-    font-family: 'Inter', sans-serif;
-    color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: #282D35;
-    background-image: url('./images/react-icon-large.png');
-    background-position: right;
-    background-repeat: no-repeat;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .logo {
-    width: 40px;
+    width: 100px;
 }
 
 .nav {
     display: flex;
     align-items: center;
     padding: 20px;
-    background-color: #21222A;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
 }
 
-.nav > h2 {
-    margin-left: 10px;
-    color: #61DAFB;
-    font-weight: 700;
-}
-
-.nav > h3 {
-    margin-left: auto;
-    font-weight: 600;
-}
-
-.main {
+main,
+.hero {
     padding: 20px;
     margin: auto;
-    max-width: 700px;
+    max-width: 550px;
 }
 
-main > ul > li {
-    margin-bottom: 1em;
+.hero-img {
+    width: 100%;
 }
 
-main > ul > li::marker {
-    color: #61DAFB;
-    font-size: 1.5em;
+.hero-text {
+    max-width: 350px;
+    width: 70%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+.card-star {
+    width: 15px;
+}
+
+.card-img-container {
+    position: relative;
+}
+
+.card-img {
+    border-radius: 10px;
+    max-width: 250px;
+}
+
+.card-img-sold::after {
+    content: 'Sold out';
+    text-transform: uppercase;
+    padding: .4em;
+    font-size: .8rem;
+    background-color: white;
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.gray {
+    color: rgb(151, 151, 151);
 }

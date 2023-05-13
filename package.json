@@ -1,6 +1,6 @@
 {
   "name": "react-project",
-  "homepage": "https://ccostafrias.github.io/scrimba-react-project",
+  "homepage": "https://ccostafrias.github.io/scrimba-airbnb-project",
   "private": true,
   "dependencies": {
     "react": "18.2.0",
