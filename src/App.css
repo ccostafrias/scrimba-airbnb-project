@@ -10,6 +10,10 @@ body {
     overflow-x: hidden;
 }
 
+main {
+    overflow-x: scroll;
+}
+
 .logo {
     width: 100px;
 }
@@ -40,6 +44,7 @@ main,
 .card {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .card p {
@@ -59,9 +64,9 @@ main,
     max-width: 250px;
 }
 
-.card-img-sold::after {
-    content: 'Sold out';
+.card-img-badge {
     text-transform: uppercase;
+    font-weight: bold;
     padding: .4em;
     font-size: .8rem;
     background-color: white;
@@ -69,6 +74,7 @@ main,
     position: absolute;
     top: 8px;
     left: 8px;
+    z-index: 1;
 }
 
 .card-title {
@@ -79,4 +85,11 @@ main,
 
 .gray {
     color: rgb(151, 151, 151);
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
 }

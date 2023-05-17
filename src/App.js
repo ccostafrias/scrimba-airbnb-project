@@ -2,7 +2,9 @@ import React from "react"
 
 import Header from "./Header"
 import Hero from "./Hero"
-import Card from "./Card"
+import Cards from "./Cards"
+
+import { cards } from "./cardsList"
 
 function App() {
     return (
@@ -12,7 +14,7 @@ function App() {
                 <Hero />
             </header>
             <main>
-                <Card />
+                <Cards cardList={cards}/>
             </main>
         </>       
     )

@@ -1,23 +1,34 @@
 import React from "react"
 
-import cardImg from "./images/katie-zaferes.png"
 import star from "./images/star.png"
 
-function Card() {
+function Card(props) {
+    const { list } = props
+
+    let badge
+
+    if (!list.openSpots) {
+        badge = "sold out"
+    } else if (list.location === 'online') {
+        badge = "online"
+    }
+
+
     return (
         <div className="card">
-            <div className="card-img-container card-img-sold">
-                <img src={cardImg} className="card-img"/>
+            {badge && <div className="card-img-badge">{badge}</div>} 
+            <div className={`card-img-container`}>
+                <img src={require(`./images/${list.img}`)} className="card-img"/>
             </div>
             <div className="card-content">
                 <p className="card-title">
                     <img src={star} className="card-star"/>
-                    <span>5.0</span>
-                    <span className="gray">(6) • </span>
-                    <span className="gray"> USA</span>
+                    <span>{list.rating}</span>
+                    <span className="gray">({list.reviews}) • </span>
+                    <span className="gray"> {list.country}</span>
                 </p>
-                <p>Life lessons with Katie Zaferes</p>
-                <p><strong>From $136</strong> / person</p>
+                <p>{list.title}</p>
+                <p><strong>From ${list.price}</strong> / person</p>
             </div>
         </div>
     )
